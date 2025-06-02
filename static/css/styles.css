@@ -6,7 +6,14 @@ body {
   line-height: 1.6;
   color: #333;
   margin: 0;
-  padding: 0;
+  padding-top: 50px;
+}
+
+/* para mobiles */
+@media (max-width: 767.98px) {
+  body {
+    padding-top: 64px;
+  }
 }
 
 /* Navbar */
@@ -56,6 +63,32 @@ body {
   object-fit: cover;
   border-radius: 50%;
   margin-bottom: 1rem;
+}
+
+.blockquote {
+  background: #f8f9fa;
+  border-left: 9px solid #007bff;
+  padding: 1rem 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 0.5rem;
+  align-items: center;
+}
+
+/* Testimonials footer */
+.blockquote p {
+  margin-bottom: 1rem;
+}
+
+.blockquote-footer {
+  position: static !important;
+  background: black !important;
+  display: block;
+  color: lightgrey;
+  margin-top: 2rem;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+  width: fit-content;
+  margin-left: auto;
 }
 
 /* Cards */
