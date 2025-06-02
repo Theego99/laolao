@@ -102,22 +102,51 @@ TOURS_BY_SEASON = {
     ],
     "summer": [
         {
-            "title": "Tottori Sand Dunes & Star Gazing",
-            "slug": "tottori-stars",
-            "image": "images/tours/summer_tottori.jpg",
-            "short_desc": "Ride camels & camp under the Milky Way.",
-            "price": 180.00,
-            "details": "Includes desert camping gear, local guides, and astronomy experts on site.",
+            "title": "Lake Tanuki & Fujinomiya Shrine Day Trip",
+            "slug": "lake-tanuki-fujinomiya",
+            "image": "images/tours/summer_lake_tanuki.png",
+            "short_desc": "Visit Lake Tanuki with Fuji views, rent a rowboat, then Fujisan Hongū Sengen Shrine and return to Shinjuku.",
+            "price": 7480.00,
+            "details": (
+                "07:00 depart Shinjuku by highway bus to Lake Tanuki (¥4000). "
+                "11:00–12:30 explore the lake, rent a rowboat to see the “double diamond Fuji”. "
+                "12:30–13:30 lunch at Kyukamura Tanuki lakeside café or a local udon shop; try Fujinomiya yakisoba. "
+                "13:35 take bus (¥880) from Lake Tanuki to Fujisan Hongū Sengen Shrine (UNESCO World Heritage). "
+                "15:00 return from Nishifujinomiya to Shinjuku via Shin-Fuji (Shinkansen Kodama or JR Tōkaidō, ¥2600), arriving around 18:30."
+            ),
         },
         {
-            "title": "Shimanami Kaido Cycling Adventure",
-            "slug": "shimanami-cycling",
-            "image": "images/tours/summer_shimanami.jpg",
-            "short_desc": "Cycle the famous Shimanami sea routes off the beaten path.",
-            "price": 140.00,
-            "details": "3-day cycling tour with ferry crossings, island-hopping, and farm-to-table meals.",
+            "title": "Nokogiriyama & Futtsu Coastal Adventure",
+            "slug": "nokogiriyama-futtsu",
+            "image": "images/tours/summer_nokogiriyama.jpg",
+            "short_desc": "Ferry to Nokogiriyama for a mountain hike and giant Buddha, then visit Cape Futtsu Park with Mt. Fuji views.",
+            "price": 3728.00,
+            "details": (
+                "07:30 depart Shinagawa → Keikyū Kurihama (¥710). "
+                "08:15–08:30 walk (~20 min) to Kurihama Ferry Port, ferry to Kanaya (¥890). "
+                "09:00–10:30 hike Nokogiriyama: see Hyaku-shaku Kannon and the 31.5 m Buddha statue. "
+                "11:00 picnic lunch at the mountain top. "
+                "11:45 descend. "
+                "12:30–14:00 train from Hamakanaya → Sanukimachi, then bus to Futtsu Port (~¥610 total). "
+                "Visit Cape Futtsu Park for a seaside walk and Mt. Fuji views. "
+                "14:30 train from Aohori → Tokyo (¥1518), returning by mid-afternoon."
+            ),
         },
-        # ...
+        {
+            "title": "Nagatoro River & Hodosan Shrine Excursion",
+            "slug": "nagatoro-hodosan",
+            "image": "images/tours/summer_nagatoro.jpg",
+            "short_desc": "Experience river activities in Nagatoro Gorge and take the ropeway up to Hodosan Shrine.",
+            "price": 2100.00,
+            "details": (
+                "08:00 take Seibu Limited Express from Ikebukuro → Seibu-Chichibu, upgrade for Nagatoro (Seibu 1-Day Pass + Nagatoro upgrade: ¥1500). "
+                "10:00–12:00 enjoy Nagatoro Gorge: choose a yakata-bune boat (approx. ¥3000) or whitewater raft ride, or rent a rowboat (¥2000) near Iwadatami Rocks. "
+                "12:15–13:15 lunch in Nagatoro town (river fish curry or river trout sashimi). "
+                "13:30 visit Hodosan Shrine; ride Nagatoro Hodosan Ropeway (¥600 round-trip) to the summit of Mt. Hodo. "
+                "15:30 walk back down, sampling local Mitsumine soba or wagashi. "
+                "16:30 return by Seibu/Nagatoro train to Ikebukuro, arriving around 18:30."
+            ),
+        },
     ],
     "autumn": [
         {
@@ -142,6 +171,7 @@ TOURS_BY_SEASON = {
         # ...
     ],
 }
+
 
 # -----------------------------------------------------------------------------
 # -- ROUTES --------------------------------------------------------------------
