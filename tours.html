@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laolao Travels – Tours</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-…"
+    crossorigin="anonymous"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="static/css/styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="static/images/logo.png" alt="Laolao Logo" />
+        <span class="ms-2 fw-bold">Laolao Travels</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNavTours"
+        aria-controls="navbarNavTours"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNavTours">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link active" href="tours.html">Tours</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Tours by Season -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-5">Our Tours by Season</h2>
+
+      <div class="accordion" id="seasonAccordion">
+        <!-- SPRING -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading-spring">
+            <button
+              class="accordion-button"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-spring"
+              aria-expanded="true"
+              aria-controls="collapse-spring"
+            >
+              Spring
+            </button>
+          </h2>
+          <div
+            id="collapse-spring"
+            class="accordion-collapse collapse show"
+            aria-labelledby="heading-spring"
+            data-bs-parent="#seasonAccordion"
+          >
+            <div class="accordion-body">
+              <div class="row g-4">
+                <!-- Cherry Cycling -->
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="static/images/tours/summer_lake_tanuki.png"
+                      class="card-img-top"
+                      alt="Cherry Blossoms & Countryside Cycling"
+                    />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Cherry Blossoms & Countryside Cycling</h5>
+                      <p class="card-text">
+                        Pedal through small towns beneath pink sakura canopies.
+                      </p>
+                      <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <a
+                          href="tours/spring_cherry-cycling.html"
+                          class="btn btn-sm btn-outline-primary"
+                          >Details</a
+                        >
+                        <span class="text-primary fw-bold">$120.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Fuji Hidden Trek -->
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="static/images/tours/summer_nagatoro.jpg"
+                      class="card-img-top"
+                      alt="Mount Fuji Yamanashi Hidden Path Trek"
+                    />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Mount Fuji Yamanashi Hidden Path Trek</h5>
+                      <p class="card-text">
+                        Beat the crowds and see Mt. Fuji from secret vantage points.
+                      </p>
+                      <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <a
+                          href="tours/spring_fuji-hidden-trek.html"
+                          class="btn btn-sm btn-outline-primary"
+                          >Details</a
+                        >
+                        <span class="text-primary fw-bold">$150.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- SUMMER -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading-summer">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-summer"
+              aria-expanded="false"
+              aria-controls="collapse-summer"
+            >
+              Summer
+            </button>
+          </h2>
+          <div
+            id="collapse-summer"
+            class="accordion-collapse collapse"
+            aria-labelledby="heading-summer"
+            data-bs-parent="#seasonAccordion"
+          >
+            <div class="accordion-body">
+              <div class="row g-4">
+                <!-- Tottori Stars -->
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="static/images/tours/summer_nokogiriyama.jpg"
+                      class="card-img-top"
+                      alt="Tottori Sand Dunes & Star Gazing"
+                    />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Tottori Sand Dunes & Star Gazing</h5>
+                      <p class="card-text">
+                        Ride camels & camp under the Milky Way.
+                      </p>
+                      <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <a
+                          href="tours/summer_tottori-sand-dunes.html"
+                          class="btn btn-sm btn-outline-primary"
+                          >Details</a
+                        >
+                        <span class="text-primary fw-bold">$180.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- Shimanami Cycling -->
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="static/images/tours/summer_shimanami.jpg"
+                      class="card-img-top"
+                      alt="Shimanami Kaido Cycling Adventure"
+                    />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Shimanami Kaido Cycling Adventure</h5>
+                      <p class="card-text">
+                        Cycle the famous Shimanami sea routes off the beaten path.
+                      </p>
+                      <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <a
+                          href="tours/summer_shimanami-cycling.html"
+                          class="btn btn-sm btn-outline-primary"
+                          >Details</a
+                        >
+                        <span class="text-primary fw-bold">$140.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AUTUMN -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading-autumn">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-autumn"
+              aria-expanded="false"
+              aria-controls="collapse-autumn"
+            >
+              Autumn
+            </button>
+          </h2>
+          <div
+            id="collapse-autumn"
+            class="accordion-collapse collapse"
+            aria-labelledby="heading-autumn"
+            data-bs-parent="#seasonAccordion"
+          >
+            <div class="accordion-body">
+              <div class="row g-4">
+                <!-- Kyoto Hidden Temples -->
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="static/images/tours/autumn_kyoto.jpg"
+                      class="card-img-top"
+                      alt="Hidden Temples of Kyoto"
+                    />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Hidden Temples of Kyoto (Off-Peak)</h5>
+                      <p class="card-text">
+                        Explore small, less-crowded shrines & teahouses.
+                      </p>
+                      <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <a
+                          href="tours/autumn_kyoto-hidden-temples.html"
+                          class="btn btn-sm btn-outline-primary"
+                          >Details</a
+                        >
+                        <span class="text-primary fw-bold">$130.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- WINTER -->
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="heading-winter">
+            <button
+              class="accordion-button collapsed"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#collapse-winter"
+              aria-expanded="false"
+              aria-controls="collapse-winter"
+            >
+              Winter
+            </button>
+          </h2>
+          <div
+            id="collapse-winter"
+            class="accordion-collapse collapse"
+            aria-labelledby="heading-winter"
+            data-bs-parent="#seasonAccordion"
+          >
+            <div class="accordion-body">
+              <div class="row g-4">
+                <!-- Nagano Snow Monkeys -->
+                <div class="col-md-4">
+                  <div class="card h-100">
+                    <img
+                      src="static/images/tours/winter_nagano.png"
+                      class="card-img-top"
+                      alt="Snow Monkeys & Nagano Village Stay"
+                    />
+                    <div class="card-body d-flex flex-column">
+                      <h5 class="card-title">Snow Monkeys & Nagano Village Stay</h5>
+                      <p class="card-text">
+                        Watch macaques bathing in hot springs—no tourist bus in sight.
+                      </p>
+                      <div class="mt-auto d-flex justify-content-between align-items-center">
+                        <a
+                          href="tours/winter_nagano-snow-monkeys.html"
+                          class="btn btn-sm btn-outline-primary"
+                          >Details</a
+                        >
+                        <span class="text-primary fw-bold">$160.00</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Laolao Travels. All rights reserved.</p>
+      <small>Built with ♥ to promote sustainable, high-quality travel in Japan.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle (Popper + JS) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-…"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>

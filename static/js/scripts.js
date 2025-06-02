@@ -1,12 +1,11 @@
-// scripts.js
-
-// Example: Smooth scroll for internal anchor links
-document.addEventListener('DOMContentLoaded', function() {
+// static/js/scripts.js
+// Example: Smooth scroll for anchor links
+document.addEventListener('DOMContentLoaded', () => {
   const anchors = document.querySelectorAll('a[href^="#"]');
-  for (let anchor of anchors) {
-    anchor.addEventListener('click', function(e) {
+  anchors.forEach(anchor => {
+    anchor.addEventListener('click', (e) => {
       e.preventDefault();
-      const targetID = this.getAttribute('href').substring(1);
+      const targetID = anchor.getAttribute('href').substring(1);
       const targetElem = document.getElementById(targetID);
       if (targetElem) {
         window.scroll({
@@ -15,5 +14,5 @@ document.addEventListener('DOMContentLoaded', function() {
         });
       }
     });
-  }
+  });
 });

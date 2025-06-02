@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Laolao Travels – Home</title>
+
+  <!-- Bootstrap 5 CSS -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-…"
+    crossorigin="anonymous"
+  />
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Merriweather:wght@400;700&display=swap"
+    rel="stylesheet"
+  />
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="static/css/styles.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center" href="index.html">
+        <img src="static/images/logo.png" alt="Laolao Logo" />
+        <span class="ms-2 fw-bold">Laolao Travels</span>
+      </a>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarNav"
+        aria-controls="navbarNav"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+          <li class="nav-item"><a class="nav-link" href="tours.html">Tours</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero-container">
+    <img
+      src="static/images/hero/hero1.jpg"
+      alt="Japanese countryside"
+      class="w-100"
+    />
+    <div class="hero-overlay">
+      <h1 class="display-4 fw-bold">Discover Japan’s Hidden Gems</h1>
+      <p class="lead">
+        High-quality, affordable tours that fight overtourism and bring you
+        closer to real Japan.
+      </p>
+      <a href="tours.html" class="btn btn-primary btn-lg mt-3">Browse Tours</a>
+    </div>
+  </section>
+
+  <!-- Why Laolao Section -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Why Travel with Laolao?</h2>
+      <div class="row text-center g-4">
+        <div class="col-md-3 icon-card">
+          <img
+            src="static/images/icons/eco_friendly.svg"
+            alt="Eco Friendly"
+          />
+          <h5 class="mt-2">Fight Overtourism</h5>
+          <p class="text-muted">
+            We take you to under-visited locales off the beaten path.
+          </p>
+        </div>
+        <div class="col-md-3 icon-card">
+          <img src="static/images/icons/value.svg" alt="Value" />
+          <h5 class="mt-2">Better Value</h5>
+          <p class="text-muted">
+            Premium experiences at affordable prices—no hidden fees.
+          </p>
+        </div>
+        <div class="col-md-3 icon-card">
+          <img src="static/images/icons/local.svg" alt="Local Partners" />
+          <h5 class="mt-2">Local Partnerships</h5>
+          <p class="text-muted">
+            We collaborate directly with small businesses and local guides.
+          </p>
+        </div>
+        <div class="col-md-3 icon-card">
+          <img src="static/images/icons/safe.svg" alt="Safe" />
+          <h5 class="mt-2">Safe &amp; Supported</h5>
+          <p class="text-muted">
+            Expert guides available 24/7—your comfort and safety come first.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Featured Tours -->
+  <section class="py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Featured Tours</h2>
+      <div class="row g-4">
+        <!-- Cherry Cycling (Spring) -->
+        <div class="col-md-3">
+          <div class="card h-100">
+            <img
+              src="static/images/tours/spring_cherry.jpg"
+              class="card-img-top"
+              alt="Cherry Blossoms & Countryside Cycling"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Cherry Blossoms & Countryside Cycling</h5>
+              <p class="card-text">
+                Pedal through small towns beneath pink sakura canopies.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <a
+                  href="tours/spring_cherry-cycling.html"
+                  class="btn btn-outline-primary btn-sm"
+                  >View Details</a
+                >
+                <span class="text-primary fw-bold">$120.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Tottori Stars (Summer) -->
+        <div class="col-md-3">
+          <div class="card h-100">
+            <img
+              src="static/images/tours/summer_tottori.jpg"
+              class="card-img-top"
+              alt="Tottori Sand Dunes & Star Gazing"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Tottori Sand Dunes &amp; Star Gazing</h5>
+              <p class="card-text">
+                Ride camels & camp under the Milky Way.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <a
+                  href="tours/summer_tottori-sand-dunes.html"
+                  class="btn btn-outline-primary btn-sm"
+                  >View Details</a
+                >
+                <span class="text-primary fw-bold">$180.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Kyoto Hidden (Autumn) -->
+        <div class="col-md-3">
+          <div class="card h-100">
+            <img
+              src="static/images/tours/autumn_kyoto.jpg"
+              class="card-img-top"
+              alt="Hidden Temples of Kyoto"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Hidden Temples of Kyoto (Off-Peak)</h5>
+              <p class="card-text">
+                Explore small, less-crowded shrines & teahouses.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <a
+                  href="tours/autumn_kyoto-hidden-temples.html"
+                  class="btn btn-outline-primary btn-sm"
+                  >View Details</a
+                >
+                <span class="text-primary fw-bold">$130.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Nagano Monkeys (Winter) -->
+        <div class="col-md-3">
+          <div class="card h-100">
+            <img
+              src="static/images/tours/winter_nagano.jpg"
+              class="card-img-top"
+              alt="Snow Monkeys & Nagano Village Stay"
+            />
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title">Snow Monkeys &amp; Nagano Village Stay</h5>
+              <p class="card-text">
+                Watch macaques bathing in hot springs—no tourist bus in sight.
+              </p>
+              <div class="mt-auto d-flex justify-content-between align-items-center">
+                <a
+                  href="tours/winter_nagano-snow-monkeys.html"
+                  class="btn btn-outline-primary btn-sm"
+                  >View Details</a
+                >
+                <span class="text-primary fw-bold">$160.00</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials (Optional) -->
+  <section class="py-5 bg-light">
+    <div class="container">
+      <h2 class="text-center mb-4">Traveler Testimonials</h2>
+      <div
+        id="testimonialCarousel"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active text-center">
+            <img
+              src="static/images/testimonials/jane.jpg"
+              alt="Jane"
+              class="testimonial-img"
+            />
+            <blockquote class="blockquote">
+              <p class="mb-0">
+                “Laolao took me to places I never dreamed of—without crowds!”
+              </p>
+              <footer class="blockquote-footer">
+                Jane Doe, <cite title="Source Title">New York, USA</cite>
+              </footer>
+            </blockquote>
+          </div>
+          <!-- Add more .carousel-item blocks if needed -->
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Laolao Travels. All rights reserved.</p>
+      <small>Built with ♥ to promote sustainable, high-quality travel in Japan.</small>
+    </div>
+  </footer>
+
+  <!-- Bootstrap 5 JS Bundle (Popper + JS) -->
+  <script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-…"
+    crossorigin="anonymous"
+  ></script>
+</body>
+</html>
