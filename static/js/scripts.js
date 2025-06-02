@@ -16,3 +16,20 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/*-----------------------------------------------
+EMAIL CONTACT FUNCTIONALITY
+*/
+
+// Function to handle email contact form submission
+function sendMail() {
+  let params = {
+    name : document.getElementById("name").value,
+    email : document.getElementById("email").value,
+    subject : document.getElementById("subject").value,  
+    message : document.getElementById("message").value
+  }
+
+  email.send("service_1x3k2qj", "template_9g4v5zj", params).then(alert("Your inquiry has been sent successfully!"))
+}
+

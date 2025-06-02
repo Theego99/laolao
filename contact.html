@@ -19,6 +19,21 @@
   />
   <!-- Custom CSS -->
   <link rel="stylesheet" href="static/css/styles.css" />
+
+  <!-- EMAIL JS script - CHECK IF WE CAN USE INSTALLER 
+  docs : https://www.emailjs.com/docs/sdk/installation/ -->
+  <script type="text/javascript"
+    src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+  </script>
+  <script type="text/javascript">
+    (function(){
+      emailjs.init({
+        // PUBLIC key from EmailJS
+        publicKey: "YOUR_PUBLIC_KEY",
+      });
+    })();
+  </script>
+  <script src="scripts.js"></script>
 </head>
 <body>
   <!-- Navbar -->
@@ -89,7 +104,7 @@
             </div>
             
             <div class="d-grid gap-2">
-              <button type="submit" class="btn btn-primary">Send Message</button>
+              <button type="submit" class="btn btn-primary" onclick="sendMail()">Send Message</button>
             </div>
           </form>
         </div>
