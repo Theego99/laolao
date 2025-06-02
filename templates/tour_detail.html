@@ -1,0 +1,83 @@
+{% extends "layout.html" %}
+{% block title %}{{ tour.title }} – Laolao Travels{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <div class="row">
+    <div class="col-md-8">
+      <img src="{{ url_for('static', filename=tour.image) }}" alt="{{ tour.title }}" class="img-fluid rounded shadow-sm mb-4">
+      <h2>{{ tour.title }}</h2>
+      <p class="lead">{{ tour.short_desc }}</p>
+      <hr>
+      <div class="tour-details mb-4">
+        {{ tour.details | safe }}
+        <!-- If details contains HTML tags, Jinja’s |safe will render them. Otherwise it’s just plain text. -->
+      </div>
+      <h4 class="mb-3">Price: ${{ '%.2f'|format(tour.price) }}</h4>
+      <!-- Booking Button -->
+      <button id="checkout-button" class="btn btn-success btn-lg">Book Now</button>
+    </div>
+    <div class="col-md-4">
+      <!-- Sidebar: Quick Facts, Inclusions, What to Bring, etc. -->
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title">Quick Facts</h5>
+          <ul class="list-unstyled">
+            <li><strong>Duration:</strong> 2 days</li>
+            <li><strong>Group Size:</strong> Max 8 people</li>
+            <li><strong>Difficulty:</strong> Moderate</li>
+            <li><strong>Start Point:</strong> Tokyo Station</li>
+            <li><strong>End Point:</strong> Same location</li>
+          </ul>
+          <hr>
+          <h6>What's Included</h6>
+          <ul class="small">
+            <li>Guide fees</li>
+            <li>Accommodation (where applicable)</li>
+            <li>Meals as described</li>
+            <li>Equipment Rental</li>
+          </ul>
+          <hr>
+          <h6>What to Bring</h6>
+          <ul class="small">
+            <li>Comfortable walking shoes</li>
+            <li>Light jacket</li>
+            <li>Camera</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Stripe JS for checkout -->
+<script src="https://js.stripe.com/v3/"></script>
+<script>
+  const stripe = Stripe("{{ stripe_pk }}");
+  const checkoutButton = document.getElementById("checkout-button");
+  checkoutButton.addEventListener("click", () => {
+    fetch("/create-checkout-session", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        season: "{{ season }}",
+        tour_slug: "{{ tour.slug }}"
+      }),
+    })
+    .then(res => res.json())
+    .then(data => {
+      if (data.error) {
+        alert(data.error);
+      } else {
+        return stripe.redirectToCheckout({ sessionId: data.id });
+      }
+    })
+    .then(result => {
+      if (result.error) {
+        alert(result.error.message);
+      }
+    })
+    .catch(err => console.error("Error:", err));
+  });
+</script>
+{% endblock %}

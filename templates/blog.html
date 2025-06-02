@@ -1,0 +1,29 @@
+<!-- templates/blog.html -->
+{% extends "layout.html" %}
+{% block title %}Blog – Laolao Travels{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+  <h2 class="mb-4">From Our Instagram</h2>
+  <div class="row">
+    {% for post in posts %}
+      <div class="col-md-4 mb-4">
+        {% if post.media_type == 'IMAGE' or post.media_type == 'CAROUSEL_ALBUM' %}
+          <img src="{{ post.media_url }}" alt="Instagram Post" class="img-fluid rounded shadow-sm">
+        {% elif post.media_type == 'VIDEO' %}
+          <video controls class="img-fluid rounded shadow-sm">
+            <source src="{{ post.media_url }}" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        {% endif %}
+        <p class="mt-2 small text-muted">
+          {{ post.caption[:100] }}{% if post.caption|length > 100 %}…{% endif %}
+        </p>
+        <a href="{{ post.permalink }}" target="_blank" class="btn btn-outline-primary btn-sm">View on Instagram</a>
+      </div>
+    {% else %}
+      <p>No posts found.</p>
+    {% endfor %}
+  </div>
+</div>
+{% endblock %}
