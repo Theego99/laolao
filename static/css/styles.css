@@ -1,10 +1,38 @@
 /* static/css/styles.css */
+/* LightMode setup */
+body {
+  --bg-light:     #ffffff;
+  --text-light:   #333333;
+  --bg-blockq:    #f8f9fa;
+  --border-block: #007bff;
+  --bg-testf:     #000000;
+  --text-testf:   lightgrey;
+  --bg-footer:    #222222;
+  --text-footer:  #dddddd;
+  --bg-card:      #ffffff;
+  --text-card:    #000000;
+}
+
+/* DarkMode setup */
+body.dark-mode {
+  --bg-light:     #121212;
+  --text-light:   #f0f0f0;
+  --bg-blockq:    #454545;
+  --border-block: #3a8bfd;
+  --bg-testf:     #2a2a2a;
+  --text-testf:   #dddddd;
+  --bg-footer:    #111111;
+  --text-footer:  #dddddd;
+  --bg-card:      #1e1e1e;
+  --text-card:    #f0f0f0;
+}
 
 /* Base font & colors */
 body {
   font-family: 'Lato', sans-serif;
   line-height: 1.6;
-  color: #333;
+  background-color: var(--bg-light);
+  color: var(--text-light);
   margin: 0;
   padding-top: 50px;
 }
@@ -21,7 +49,13 @@ body {
   height: 40px;
 }
 .navbar {
+  background-color: var(--bg-light) !important;
   box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.navbar .navbar-brand,
+.navbar .navbar-nav .nav-link {
+  color: var(--text-light) !important;
 }
 
 /* Hero Section */
@@ -30,11 +64,13 @@ body {
   height: 80vh;
   overflow: hidden;
 }
+
 .hero-container img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
 .hero-overlay {
   position: absolute;
   top: 50%;
@@ -42,12 +78,14 @@ body {
   transform: translate(-50%, -50%);
   background-color: rgba(0, 0, 0, 0.5);
   padding: 2rem;
-  border-radius: 8px;
+  border-radius: 40px;
   text-align: center;
 }
+
 .hero-overlay h1,
 .hero-overlay p {
-  color: #fff;
+  color: #dddddd;
+  opacity: 0.85;
 }
 
 /* “Why Laolao?” Section */
@@ -66,7 +104,9 @@ body {
 }
 
 .blockquote {
-  background: #f8f9fa;
+  background: var(--bg-blockq);
+  border-left-color: var(--border-block);
+  color: var(--text-light);
   border-left: 9px solid #007bff;
   padding: 1rem 1.5rem;
   margin-bottom: 2rem;
@@ -81,9 +121,9 @@ body {
 
 .blockquote-footer {
   position: static !important;
-  background: black !important;
+  background: var(--bg-testf) !important;
+  color: var(--text-testf);
   display: block;
-  color: lightgrey;
   margin-top: 2rem;
   border-radius: 20px;
   padding: 0.5rem 1rem;
@@ -93,23 +133,26 @@ body {
 
 /* Cards */
 .card {
-  border-radius: 0.5rem;
+  background-color: var(--bg-card);
+  color: var(--text-card);
   box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  border-radius: 25px;
 }
 .card-img-top {
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
   object-fit: cover;
 }
 .card-body {
   display: flex;
   flex-direction: column;
+  border-radius: 25px;
 }
 
 /* Footer */
 footer {
-  background-color: #222;
-  color: #ddd;
+  background-color: var(--bg-footer);
+  color: var(--text-footer);
   padding: 1.5rem 0;
   text-align: center;
   font-size: 0.9rem;
@@ -127,7 +170,7 @@ footer {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  border-radius: 4px;
+  border-radius: 25px;
 }
 
 /* Utility */
@@ -137,13 +180,345 @@ footer {
 .btn-primary {
   background-color: #0066cc;
   border-color: #0066cc;
+  border-radius: 25px;
 }
 .btn-primary:hover {
   background-color: #005bb5;
   border-color: #005bb5;
+  border-radius: 25px;
 }
 
-/* Accordion scroll margin */
+/* =============================
+   DARK/LIGHT THEME FOR “About” SECTION
+   ============================= */
+
+section.py-5 {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+}
+section.py-5 .lead {
+  color: var(--text-light);
+}
+section.py-5 .list-group-item {
+  background-color: var(--bg-card);
+  color: var(--text-card);
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode section.py-5 {
+  background-color: var(--bg-light);
+  color: var(--text-light);
+  border-radius: 25px;
+}
+body.dark-mode section.py-5 .lead {
+  color: var(--text-light);
+  border-radius: 25px;
+}
+body.dark-mode section.py-5 .list-group-item {
+  background-color: var(--bg-card);
+  color: var(--text-card);
+  border-radius: 25px;
+  margin-bottom: 0.5rem;
+}
+
+/* =============================
+   DARK/LIGHT THEME PARA “Tours by Season”
+   ============================= */
+
+section.py-5 .accordion-button {
+  background-color: var(--bg-light);
+  color:               var(--text-light);
+}
+
+section.py-5 .accordion-body {
+  background-color: var(--bg-light);
+  color:               var(--text-light);
+}
+
+section.py-5 .card {
+  background-color: var(--bg-card);
+  color:               var(--text-card);
+}
+
+section.py-5 .card .card-body h5,
+section.py-5 .card .card-body p,
+section.py-5 .card .card-body .text-primary {
+  color: var(--text-card);
+}
+
+section.py-5 .btn-outline-primary {
+  color:           var(--text-light);
+  border-color:    var(--text-light);
+}
+section.py-5 .btn-outline-primary:hover,
+section.py-5 .btn-outline-primary:focus {
+  background-color: var(--text-light);
+  color:             var(--bg-light);
+  border-color:      var(--text-light);
+}
+
+body.dark-mode section.py-5 .accordion-button {
+  background-color: var(--bg-blockq);
+  color:               var(--text-light);
+}
+body.dark-mode section.py-5 .accordion-button:not(.collapsed) {
+  background-color: var(--bg-blockq);
+  color:               var(--text-light);
+}
+body.dark-mode section.py-5 .accordion-body {
+  background-color: var(--bg-blockq);
+  color:               var(--text-light);
+}
+body.dark-mode section.py-5 .card {
+  background-color: var(--bg-card);
+  color:               var(--text-card);
+}
+body.dark-mode section.py-5 .card .card-body h5,
+body.dark-mode section.py-5 .card .card-body p,
+body.dark-mode section.py-5 .card .card-body .text-primary {
+  color: var(--text-card);
+}
+body.dark-mode section.py-5 .btn-outline-primary {
+  color:           var(--text-light);
+  border-color:    var(--text-light);
+}
+body.dark-mode section.py-5 .btn-outline-primary:hover,
+body.dark-mode section.py-5 .btn-outline-primary:focus {
+  background-color: var(--text-light);
+  color:             var(--bg-light);
+  border-color:      var(--text-light);
+}
+
+html, body, section.py-5 .accordion-button, section.py-5 .accordion-body,
+section.py-5 .card, section.py-5 .btn-outline-primary {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* =====================================
+   FULLCALENDAR – ESTILOS “MODERNOS”
+   ===================================== */
+
+/* 1) Contenedor general del calendario */
+/*    - Fondo tipo “card”, bordes redondeados, sombra sutil. */
+#calendar {
+  background-color: var(--bg-card);
+  border-radius: 0.75rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  padding: 1rem;
+  margin: 1rem 0;
+  font-family: 'Lato', sans-serif;
+}
+
+/* 2) Toolbar (header con título y botones) */
+/*    - Fondo principal, bordes, separación, tipografía más grande. */
+.fc .fc-toolbar {
+  background-color: var(--bg-light);
+  border-bottom: 2px solid rgba(0, 0, 0, 0.05);
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem; 
+}
+.fc .fc-toolbar-chunk h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-light);
+}
+.fc .fc-button {
+  background-color: transparent;
+  border: 1px solid var(--text-light);
+  border-radius: 0.25rem;
+  color: var(--text-light);
+  font-size: 0.9rem;
+  margin: 0 0.15rem;
+  padding: 0.35rem 0.6rem;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+.fc .fc-button:hover,
+.fc .fc-button:focus {
+  background-color: var(--text-light);
+  color: var(--bg-light);
+  border-color: var(--text-light);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.fc .fc-button.fc-button-active {
+  background-color: var(--text-light);
+  color: var(--bg-light);
+}
+
+/* 3) Cabecera de días (Mon, Tue, Wed, …) */
+.fc .fc-col-header-cell-cushion {
+  font-weight: 600;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  text-transform: uppercase;
+}
+.fc .fc-col-header {
+  background-color: var(--bg-light);
+}
+
+/* 4) Celdas de días (día numérico y fondo) */
+.fc .fc-daygrid-day-top {
+  font-weight: 600;
+  color: var(--text-light);
+}
+.fc .fc-daygrid-day-frame {
+  background-color: var(--bg-light);
+}
+.fc .fc-scrollgrid-section-liquid .fc-daygrid-day.fc-day-today {
+  background-color: rgba(38, 70, 83, 0.05); /* color sutil para “hoy” */
+  border-radius: 0.5rem;
+}
+
+/* 5) Eventos de día completo */
+.fc .fc-daygrid-event {
+  background-color: var(--text-light);
+  color: var(--bg-light);
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.9rem;
+  padding: 0.25rem 0.4rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.1s ease;
+}
+.fc .fc-daygrid-event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* 6) Vista semanal y diaria (timeGrid) */
+.fc .fc-timegrid-slot-label {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+.fc .fc-timegrid-event {
+  background-color: var(--text-light);
+  color: var(--bg-light);
+  border: none;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  transition: transform 0.1s ease;
+}
+.fc .fc-timegrid-event:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+}
+
+/* 7) Vista mensual (dayGrid) – celdas inactivas de otros meses */
+.fc .fc-day-other {
+  background-color: var(--bg-light);
+  opacity: 0.4;
+}
+
+/* 8) Modo Oscuro: cuando <body> tenga .dark-mode */
+/*    Sobrescribimos los mismos selectores usando las variables ya definidas */
+
+body.dark-mode #calendar {
+  background-color: var(--bg-blockq);
+  color: var(--text-light);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+body.dark-mode .fc .fc-toolbar {
+  background-color: var(--bg-blockq);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+body.dark-mode .fc .fc-toolbar-chunk h2 {
+  color: var(--text-light);
+}
+body.dark-mode .fc .fc-button {
+  border: 1px solid var(--text-light);
+  color: var(--text-light);
+}
+body.dark-mode .fc .fc-button:hover,
+body.dark-mode .fc .fc-button:focus {
+  background-color: var(--text-light);
+  color: var(--bg-blockq);
+  border-color: var(--text-light);
+}
+body.dark-mode .fc .fc-button.fc-button-active {
+  background-color: var(--text-light);
+  color: var(--bg-blockq);
+}
+
+body.dark-mode .fc .fc-col-header-cell-cushion {
+  color: var(--text-light);
+}
+body.dark-mode .fc .fc-daygrid-day-top {
+  color: var(--text-light);
+}
+body.dark-mode .fc .fc-daygrid-day-frame {
+  background-color: var(--bg-blockq);
+}
+body.dark-mode .fc .fc-daygrid-day.fc-day-today {
+  background-color: rgba(55, 65, 81, 0.3);
+}
+
+body.dark-mode .fc .fc-daygrid-event {
+  background-color: var(--text-card);
+  color: var(--bg-blockq);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+body.dark-mode .fc .fc-daygrid-event:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .fc .fc-timegrid-slot-label {
+  color: var(--text-light);
+}
+body.dark-mode .fc .fc-timegrid-event {
+  background-color: var(--text-card);
+  color: var(--bg-blockq);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+body.dark-mode .fc .fc-timegrid-event:hover {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.4);
+}
+
+body.dark-mode .fc .fc-day-other {
+  background-color: var(--bg-blockq);
+  opacity: 0.4;
+}
+
+/* =====================================
+   TOOLTIP PERSONALIZADO PARA EVENTOS
+===================================== */
+.fc-event-tooltip {
+position: absolute;
+z-index: 10000;
+background-color: var(--bg-card);
+color:            var(--text-card);
+border:           1px solid rgba(0, 0, 0, 0.1);
+border-radius:    0.5rem;
+box-shadow:       0 4px 10px rgba(0,0,0,0.1);
+padding:          0.75rem 1rem;
+font-size:        0.9rem;
+max-width:        200px;
+pointer-events:   none; /* Para que no interfiera con el hover */
+transition:       opacity 0.15s ease-in-out;
+opacity:          0;    /* Arrancamos oculto, luego haremos fade-in */
+}
+
+/* Cuando el tooltip se añade, volvemos la opacidad a 1 */
+.fc-event-tooltip[style] {
+opacity: 1;
+}
+
+/* Adaptación para Dark Mode */
+body.dark-mode .fc-event-tooltip {
+background-color: var(--bg-blockq);
+color:            var(--text-light);
+border-color:     rgba(255, 255, 255, 0.1);
+box-shadow:       0 4px 10px rgba(0,0,0,0.4);
+}
+
+/* Smooth scrolling for sections */
+html {
+  scroll-behavior: smooth;
+}
+
 section {
   scroll-margin-top: 70px;
+}
+
+html, body, .navbar, .card, .blockquote, footer {
+  transition: background-color 0.3s ease, color 0.3s ease;
 }

@@ -17,9 +17,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-/*-----------------------------------------------
-EMAIL CONTACT FUNCTIONALITY
-*/
+/*  EMAIL CONTACT FUNCTIONALITY  */
 
 // Function to handle email contact form submission
 function sendMail() {
@@ -33,3 +31,34 @@ function sendMail() {
   email.send("service_1x3k2qj", "template_9g4v5zj", params).then(alert("Your inquiry has been sent successfully!"))
 }
 
+// SCRIPT TO TOGGLE MODE LIGHT/DARK
+;(function() {
+  const toggleBtn = document.getElementById('themeToggle');
+  const bodyEl    = document.body;
+  const DARK_CLASS = 'dark-mode';
+  const STORAGE_KEY = 'laolaoTheme';
+
+  const savedTheme = localStorage.getItem(STORAGE_KEY);
+  if (savedTheme === 'dark') {
+    bodyEl.classList.add(DARK_CLASS);
+    toggleBtn.textContent = '☀️';
+  } else {
+    bodyEl.classList.remove(DARK_CLASS);
+    toggleBtn.textContent = '🌙';
+  }
+
+  function switchTheme() {
+    const isDark = bodyEl.classList.toggle(DARK_CLASS);
+    if (isDark) {
+      toggleBtn.textContent = '☀️';
+      localStorage.setItem(STORAGE_KEY, 'dark');
+    } else {
+      toggleBtn.textContent = '🌙';
+      localStorage.setItem(STORAGE_KEY, 'light');
+    }
+  }
+
+  if (toggleBtn) {
+    toggleBtn.addEventListener('click', switchTheme);
+  }
+})();
