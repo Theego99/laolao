@@ -25,10 +25,11 @@ function sendMail() {
     name : document.getElementById("name").value,
     email : document.getElementById("email").value,
     subject : document.getElementById("subject").value,  
-    message : document.getElementById("message").value
+    message : document.getElementById("message").value,
+    phone: document.getElementById("phone").value
   }
 
-  email.send("service_1x3k2qj", "template_9g4v5zj", params).then(alert("Your inquiry has been sent successfully!"))
+  emailjs.send("service_48gf38j", "template_fbbltrm", params).then(alert("Your inquiry has been sent successfully! ✅ We will get back to you soon."))
 }
 
 // SCRIPT TO TOGGLE MODE LIGHT/DARK

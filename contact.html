@@ -29,7 +29,7 @@
     (function(){
       emailjs.init({
         // PUBLIC key from EmailJS
-        publicKey: "YOUR_PUBLIC_KEY",
+        publicKey: "oYoh0vKKO7v47vQ51",
       });
     })();
   </script>
@@ -87,6 +87,11 @@
               <label for="email" class="form-label">Email Address</label>
               <input type="email" class="form-control" id="email" name="email" required>
             </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label">Phone Number</label>
+              <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
             
             <div class="mb-3">
               <label for="subject" class="form-label">Subject</label>
@@ -135,6 +140,32 @@
       <small>Built with ♥ to promote sustainable, high-quality travel in Japan.</small>
     </div>
   </footer>
+
+  <!-- Phone input -->
+  <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/css/intlTelInput.css"
+  />
+
+  <script
+  src="https://cdn.jsdelivr.net/npm/intl-tel-input@25.3.1/build/js/intlTelInput.min.js"
+  defer
+  ></script>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const phoneInput = document.querySelector('#phone');
+      if (!phoneInput) return;
+  
+      window.intlTelInput(phoneInput, {
+        initialCountry: 'auto',
+        preferredCountries: ['us','gb','jp','es'], // ajusta la lista al gusto
+        utilsScript:
+          'https://cdn.jsdelivr.net/npm/intl-tel-input@18.1.2/build/js/utils.js'
+          // utils.js es necesario para format/validation. Usa misma versión que el CSS/JS.
+      });
+    });
+  </script>  
 
   <!-- Bootstrap 5 JS Bundle (Popper + JS) -->
   <script
